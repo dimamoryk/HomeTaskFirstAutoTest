@@ -12,7 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 
 public abstract class BaseTest {
-    protected static final String BASE_URL = "https://otus.home.kartushin.su/form.html";
+    static final String BASE_URL = System.getProperty("base.url", "https://otus.home.kartushin.su/form.html");
+
     protected WebDriver driver;
 
     @BeforeAll
